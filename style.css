@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: 
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+  #fff;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  font-family: 'Manjari', sans-serif;
+}
+
+div.contenedor{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+
+.contenedor>.logo,
+.contenedor>.principal,
+.contenedor>.sidebar,
+.contenedor>.poster,
+.contenedor>.pie-pagina{
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+.contenedor .logo,
+.contenedor .pie-pagina{
+    grid-column: 1/6;
+    background-color: #1e272e;
+    color: #ffffff; 
+}
+
+.contenedor .principal{
+    grid-column: span 3;
+}
+
+.contenedor .sidebar{
+    grid-column: span 2;
+    background-color: #485460;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor .sidebar img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.principal .articulo{
+    background-color: #807e90;
+    margin: 10px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.principal .articulo h1,
+.principal .articulo p{
+    padding: 10px;
+}
+
+div.poster{
+    height: 200px;
+    background-color: #1e272e!important;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+div.poster:hover{
+    background-color: #ffffff!important;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor .principal,
+    .contenedor .sidebar,
+    .contenedor .poster{
+        grid-column: 1/-1;
+    }
+}
+
+
+
+
+
